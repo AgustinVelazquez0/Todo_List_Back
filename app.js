@@ -47,5 +47,5 @@ app.use((err, req, res, next) => {
 
 // Servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://0.0.0.0:${PORT}`);
 });
