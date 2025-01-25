@@ -35,7 +35,7 @@ pool.query("SELECT NOW()", (err, res) => {
 
 // Conexión a MongoDB
 mongoose
-  .connect(process.env.MONGO_URI) // Usar variable de entorno para MongoDB
+  .connect(process.env.MONGO_URL) // Usar variable de entorno para MongoDB
   .then(() => console.log("Conexión a MongoDB exitosa"))
   .catch((err) => console.error("Error conectando a MongoDB:", err));
 
