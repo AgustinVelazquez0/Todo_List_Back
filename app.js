@@ -35,15 +35,13 @@ pool.query("SELECT NOW()", (err, res) => {
 
 // Conexión a MongoDB
 mongoose
-  .connect(process.env.MONGO_URL) // Usar variable de entorno para MongoDB
-  .then(() => console.log("Conexión a MongoDB exitosa"))
-  .catch((err) => console.error("Error conectando a MongoDB:", err));
-
-// Middleware de manejo de errores
-app.use((err, req, res, next) => {
-  console.error("Error no manejado:", err);
-  res.status(500).json({ error: "Ha ocurrido un error en el servidor" });
-});
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("Conexión a MongoDB exitosa");
+  })
+  .catch((err) => {
+    console.error("Error conectando a MongoDB:", err);
+  });
 
 // Servidor
 app.listen(PORT, () => {
