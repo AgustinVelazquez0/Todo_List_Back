@@ -33,15 +33,17 @@ pool.query("SELECT NOW()", (err, res) => {
   }
 });
 
-// Conexión a MongoDB
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => {
+// Conexión a MongoDB con manejo de errores
+async function connectToMongoDB() {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
     console.log("Conexión a MongoDB exitosa");
-  })
-  .catch((err) => {
+  } catch (err) {
     console.error("Error conectando a MongoDB:", err);
-  });
+  }
+}
+
+connectToMongoDB();
 
 // Servidor
 app.listen(PORT, () => {
