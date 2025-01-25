@@ -1,8 +1,8 @@
 const { Pool } = require("pg");
 
-// Configuración del Pool de conexiones usando la variable de entorno POSTGRES_URL
+// Configuración del Pool de conexiones usando la variable de entorno DATABASE_URL
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_URL, // Usar la URL de conexión proporcionada por Railway
+  connectionString: process.env.DATABASE_URL, // Usando la URL de la base de datos PostgreSQL de Railway
 });
 
 // Manejo de errores
