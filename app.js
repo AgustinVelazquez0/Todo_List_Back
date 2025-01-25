@@ -8,7 +8,7 @@ const userRoutes = require("./routes/userRoutes");
 const pool = require("./config/postgresClient"); // Importar la configuración de PostgreSQL
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Usar variable de entorno para el puerto
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({ origin: process.env.CLIENT_URL })); // Permitir solicitudes desde el cliente
