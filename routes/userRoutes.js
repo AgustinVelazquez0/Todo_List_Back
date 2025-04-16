@@ -6,11 +6,16 @@ const authenticateToken = require("../middleware/verifyToken");
 
 const router = express.Router();
 
-// Ruta POST para login
-router.post("/login", loginUser);
+// routes/userRoutes.js
+router.post("/login", (req, res) => {
+  console.log("Recibiendo solicitud de login");
+  loginUser(req, res);
+});
 
-// Ruta para registrar un nuevo usuario
-router.post("/register", registerUser);
+router.post("/register", (req, res) => {
+  console.log("Recibiendo solicitud de registro");
+  registerUser(req, res);
+});
 
 // Ruta para obtener la información del usuario autenticado
 router.get("/me", authenticateToken, (req, res) => {
