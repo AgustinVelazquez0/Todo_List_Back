@@ -1,9 +1,8 @@
 const { Pool } = require("pg");
+require("dotenv").config(); // Asegurate de tener esto arriba para leer .env
 
-// Configuración del Pool de conexiones usando la URL externa de la base de datos
 const pool = new Pool({
-  connectionString:
-    "postgresql://todolistpostgres_user:5oEAmpA0GgCBJFZtOPkKG9VFMxbcxdGh@dpg-cvvorh49c44c73f6arf0-a.virginia-postgres.render.com/todolistpostgres",
+  connectionString: process.env.DATABASE_URL, // Ahora viene desde .env
   ssl: {
     rejectUnauthorized: false,
   },
