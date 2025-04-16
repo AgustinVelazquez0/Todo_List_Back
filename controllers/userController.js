@@ -64,6 +64,8 @@ const loginUser = async (req, res) => {
 const registerUser = async (req, res) => {
   const { name, document, email, password } = req.body;
 
+  console.log("Datos recibidos:", name, document, email, password); // Verifica los datos
+
   // Validar datos
   if (!name || !document || !email || !password) {
     return res
@@ -86,6 +88,8 @@ const registerUser = async (req, res) => {
     // Hashear la contraseña con bcrypt
     const saltRounds = 10;
     const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+    console.log("Contraseña hasheada:", hashedPassword);
 
     // Insertar el nuevo usuario con la contraseña hasheada
     const result = await pool.query(
