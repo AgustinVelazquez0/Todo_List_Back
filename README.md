@@ -1,4 +1,4 @@
-# Backend - Proyecto **To-Do List** con Node.js, Express, MongoDB y PostgreSQL
+# Backend - Proyecto **To-Do List** con Node.js, JWT, Express, MongoDB, MongoDB Atlas y PostgreSQL
 
 ---
 
