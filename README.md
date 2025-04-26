@@ -4,7 +4,7 @@
 
 ## Descripción del Proyecto
 
-Este es el backend de la aplicación **To-Do List**. Está construido con **Node.js**, **Express.js** y las bases de datos **MongoDB** para las tareas y **PostgreSQL** para la autenticación de usuarios. Además, utiliza **JWT** para la autenticación segura de usuarios. Está deplegado en servidor con MongoDB Atlas y Render en la rama Deploy.
+Este es el backend de la aplicación **To-Do List**. Está construido con **Node.js**, **Express.js** y las bases de datos **MongoDB** para las tareas y **PostgreSQL** para la autenticación de usuarios. Además, utiliza **JWT** para la autenticación segura de usuarios. Está deplegado en servidor con MongoDB Atlas y Render en la rama **Deploy**.
 
 El backend proporciona rutas RESTful para interactuar con las tareas y los usuarios, y se ejecuta en un servidor local.
 
